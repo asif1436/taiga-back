@@ -976,6 +976,10 @@ class SwimlaneUserStoryStatus(models.Model):
     def project(self):
         return self.status.project
 
+    @property
+    def project_id(self):
+        return self.status.project_id
+
 
 class ProjectTemplate(TaggedMixin, TagsColorsMixin, models.Model):
     name = models.CharField(max_length=250, null=False, blank=False,

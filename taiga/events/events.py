@@ -44,6 +44,11 @@ def emit_event(data:dict, routing_key:str, *,
     backend = backends.get_events_backend()
 
     def backend_emit_event():
+        print(f"\n>>>>>>>>>>> Event >>>>>>>>>>>>>>>>>>")
+        print(f"\tdata: {json.dumps(data)}")
+        print(f"\trouting_key: {routing_key}")
+        print(f"\tchannel: {channel}")
+        print(f"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n")
         backend.emit_event(message=json.dumps(data), routing_key=routing_key, channel=channel)
 
     if on_commit:
