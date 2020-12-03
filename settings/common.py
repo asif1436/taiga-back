@@ -647,6 +647,14 @@ MDRENDER_CACHE_ENABLE = True
 MDRENDER_CACHE_MIN_SIZE = 40
 MDRENDER_CACHE_TIMEOUT = 86400
 
+# TELEMETRY
+
+ENABLE_TELEMETRY = False
+RUDDER_WRITE_KEY = ""
+DATA_PLANE_URL = "https://telemetry.taiga.io"
+INSTALLED_APPS += [
+        "taiga.telemetry"
+]
 
 # NOTE: DON'T INSERT ANYTHING AFTER THIS BLOCK
 TEST_RUNNER = "django.test.runner.DiscoverRunner"
